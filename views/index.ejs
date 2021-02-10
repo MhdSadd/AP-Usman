@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>AP Usman Foundation</title>
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: BizPage - v3.1.0
+  * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <style>
+    .main h5{
+     color: black;
+     font-weight: bolder;
+    }
+    .main a{
+      background-color: white;
+      border: transparent;
+      font-weight: bolder;
+      font-size: .9rem;
+    }
+    .main a:hover{
+      background-color: transparent;
+      border: 1px solid black;
+      color: #000;
+    }
+    #loadMore a{
+      width: 8rem;
+      display: flex;
+      flex-flow: column;
+      align-self: center;
+    }
+
+    .card {
+      border: transparent !important;
+    }
+
+    .btn.focus, .btn:focus{
+      box-shadow: 0 0 0 0rem rgba(255, 255, 255, 0.25) !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-transparent">
+    <div class="container-fluid">
+
+      <div class="row justify-content-center">
+        <div class="col-xl-11 d-flex align-items-center">
+
+          <a href="/" class="logo mr-auto"><img class="mr-3" src="assets/img/logo1.png" alt="" class="img-fluid">
+            <h1>AP Usman Foundation</h1>
+          </a>
+
+
+
+          <nav class="nav-menu d-none d-lg-block">
+            <ul>
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#team">Team</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+              <%if (user) { %>
+              <li><a href="/admin/dashboard"><%= user.username %> </a></li>
+              <% } else { %> 
+                <li><a href="/admin/login">Login</a></li>
+              <% } %> 
+
+            </ul>
+          </nav><!-- .nav-menu -->
+        </div>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Intro Section ======= -->
+  <section id="intro">
+    <div class="intro-container">
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active" style="background-image: url(assets/img/intro-carousel/1.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Humanitarian Services</h2>
+                <p class="animate__animated animate__fadeInUp">"Life's most persistent and urgent question is, 'What are
+                  you doing for others?'" <br> -Martin Luther King Jr.</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
+                  Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url(assets/img/intro-carousel/2.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Financial Education and Intermediation</h2>
+                <p class="animate__animated animate__fadeInUp">"A good head and good heart are always a formidable
+                  combination. But when you add to that a literate tongue or pen, then you have something very special."
+                  <br> -Nelson Mandela</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
+                  Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url(assets/img/intro-carousel/3.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Medical Outreaches</h2>
+                <p class="animate__animated animate__fadeInUp">"The best way to find yourself is to lose yourself in the
+                  service of others." <br> -Mahatma Gandi</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
+                  Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item" style="background-image: url(assets/img/intro-carousel/4.jpg)">
+            <div class="carousel-container">
+              <div class="container">
+                <h2 class="animate__animated animate__fadeInDown">Facilitation of skills upgrade</h2>
+                <p class="animate__animated animate__fadeInUp">"People rarely succeed unless they have fun in what they
+                  are doing." <br> -Dale Carnegie</p>
+                <a href="#featured-services" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
+                  Started</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Intro Section -->
+
+  <main id="main">
+
+    <!-- ======= Featured Services Section Section ======= -->
+    <section id="featured-services">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 box">
+            <i class="ion-ios-bookmarks-outline"></i>
+            <h4 class="title"><a href="">Humanitarian Services</a></h4>
+            <p class="description">Medical Outreaches and Community Services</p>
+          </div>
+
+          <div class="col-lg-4 box box-bg">
+            <i class="ion-ios-stopwatch-outline"></i>
+            <h4 class="title"><a href="">Financial Education and Intermediation</a></h4>
+            <p class="description">Tuition fee scholarships for students aspiring to futher their education</p>
+          </div>
+
+          <div class="col-lg-4 box">
+            <i class="ion-ios-heart-outline"></i>
+            <h4 class="title"><a href="">Facilitation of Skills Upgrade</a></h4>
+            <p class="description">Help to build up youths and empower their skills</p>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Featured Services Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>About Us</h3>
+          <p>The foundation operates as a non-profit making organisation exclusively to promote, develop, empower
+            various humanitarian servicez in accordance with the laid down rules, regulations, act, procedures, policies
+            and principles governing the association and humanity in general.</p>
+        </header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/about-mission.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Mission</a></h2>
+              <p>
+                <ul>
+                  <li>To inspire lifelong learning, advance knowledge, and strengthen our communities.</li>
+                  <li>A world of hope, tolerance and social justice, where poverty has been overcome and all people live
+                    in dignity and security.</li>
+                  <li>Where every person has the opportunity to achieve his/her fullest potential and participate in and
+                    contribute to all aspects of life.</li>
+                  <li>And to build a world where all communities have full access to innovative, high-quality,
+                    affordable, evidence-based sexual and reproductive health services, whenever, wherever, and however
+                    they are needed.</li>
+                  <li>To solve unsolved problems innovatively.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/about-plan.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-list-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Plan</a></h2>
+              <p>
+                Nothing less than realizing the full potentials of humanity — universal access to research and
+                education, full participation in culture — to drive a new era of development, growth, and productivity.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="about-col">
+              <div class="img">
+                <img src="assets/img/about-vision.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Vision</a></h2>
+              <p>
+                <ul>
+                  <li>To leave a sustainable world for future generations.</li>
+                  <li>A world in which every child attains the right to survival, protection, development, and
+                    participation.</li>
+                  <li>Shaping the future by preserving our heritage, discovering new knowledge, and sharing our
+                    resources with the world.</li>
+                  <li>To implement sustainable programs that improve access worldwide to investment, opportunity,
+                    empowerment, skills development and lifesaving services now and for future generations.</li>
+                  <li>We seek to save a planet, a world of life. Reconciling the needs of human beings and the needs of
+                    others that share the Earth.</li>
+                  <li>We envision a world where all people – even in the most remote areas of the globe – hold the power
+                    to create opportunity for themselves and others.</li>
+                  <li>A world in which every person enjoys all of the human rights enshrined in the Universal
+                    Declaration of Human Rights and other international human rights instruments.</li>
+                  <li>To transform communities by inspiring people throughout the world to open their minds, accept and
+                    include people with intellectual disabilities and thereby anyone who is perceived as different.</li>
+                  </li>
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header wow fadeInUp">
+          <h3>Services</h3>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
+            <h4 class="title"><a href="">Medical Outreaches</a></h4>
+            <p class="description">
+              <ul>
+                <li>Provision of free medical facilities, tools and equipments.</li>
+                <li>Provision of clinics to rural communities.</li>
+                <li>Provision of drugs and various medical support.</li>
+              </ul>
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
+            <h4 class="title"><a href="">Humanitarian Services</a></h4>
+            <p class="description">
+              <ul>
+                <li>Provision of aids to displaced individuals in IDPs and homes.</li>
+                <li>Provision of relieve materials to environment affected by natural disasters.</li>
+                <li>Entrepreneurial development and empowerment.</li>
+              </ul>
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="ion-ios-paper-outline"></i></div>
+            <h4 class="title"><a href="">Educational Scholarships</a></h4>
+            <p class="description">
+              <ul>
+                <li>Financial Education and Intermediation.</li>
+                <li>Provision of educational materials, equipments and facilities.</li>
+                <li>Provision of scholarships to outstanding and less priviledge, disabled, orphans and societal
+                  ill-treated individuals.</li>
+              </ul>
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+            <h4 class="title"><a href="">Facilitation of Skills Upgrade</a></h4>
+            <p class="description">
+              <ul>
+                <li>Provision of advanced technical knowhow.</li>
+                <li>Improved, creative, innovative skill upgrade.</li>
+                <li>Enlightenment and discovery of inbuilt abilities and human resource.</li>
+              </ul>
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="ion-ios-people-outline"></i></div>
+            <h4 class="title"><a href="">Community service</a></h4>
+            <p class="description">
+              <ul>
+                <li>Provision of portable water supply e.g. borehole and modern-day wells.</li>
+                <li>Provision of agro and extension services.</li>
+                <li>Facilitation and provision of modern-day tools, equipments, seed and seedlings, farm input and
+                  output, implements and machine.</li>
+              </ul>
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="portfolio" class="section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3 class="section-title">Photo Gallery</h3>
+        </header>
+
+        <!-- <div class="row" data-aos="fade-up" data-aos-delay="100"">
+      <div class=" col-lg-12">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-card">Card</li>
+            <li data-filter=".filter-web">Web</li>
+          </ul>
+        </div>
+      </div> -->
+
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="/assets/img/gallery/1.jpg" class="img-fluid" alt="">
+              <a href="/assets/img/gallery/1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview"><i class="ion ion-eye"></i></a>
+            </figure>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="/assets/img/gallery/2.jpg" class="img-fluid" alt="">
+              <a href="/assets/img/gallery/2.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Web 3"><i class="ion ion-eye"></i></a>
+            </figure>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="/assets/img/gallery/3.jpg" class="img-fluid" alt="">
+              <a href="/assets/img/gallery/3.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="App 2"><i class="ion ion-eye"></i></a>
+            </figure>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="/assets/img/gallery/4.jpg" class="img-fluid" alt="">
+              <a href="/assets/img/gallery/4.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Card 2"><i class="ion ion-eye"></i></a>
+            </figure>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="/assets/img/gallery/5.jpg" class="img-fluid" alt="">
+              <a href="/assets/img/gallery/5.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Web 2"><i class="ion ion-eye"></i></a>
+            </figure>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="/assets/img/gallery/6.jpg" class="img-fluid" alt="">
+              <a href="/assets/img/gallery/6.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="App 3"><i class="ion ion-eye"></i></a>
+            </figure>
+
+          </div>
+        </div>
+
+        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="/assets/img/img/portfolio/card1.jpg" class="img-fluid" alt="">
+              <a href="/assets/img/img/portfolio/card1.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Card 1"><i class="ion ion-eye"></i></a>
+            </figure>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="/assets/img/img/portfolio/card3.jpg" class="img-fluid" alt="">
+              <a href="/assets/img/img/portfolio/card3.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Card 3"><i class="ion ion-eye"></i></a>
+            </figure>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="/assets/img/img/portfolio/web1.jpg" class="img-fluid" alt="">
+              <a href="/assets/img/img/portfolio/web1.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="Web 1"><i class="ion ion-eye"></i></a>
+            </figure>
+
+          </div>
+        </div> -->
+
+      </div>
+
+      </div>
+    </section><!-- End Gallery Section -->
+
+
+    <!-- ======= Our Partners Section ======= -->
+    <section id="clients">
+      <div class="container" data-aos="zoom-in">
+
+        <header class="section-header">
+          <h3>Our Partners</h3>
+        </header>
+
+        <div class="owl-carousel clients-carousel">
+          <a href="http://iconuniversitymst.education"><img src="./assets/img/ICON University.jpeg" alt="">Icon
+            University</a>
+          <a href="https://m.facebook.com/Truthembassyglobal/"><img src="./assets/img/Truth Embassy Global.jpg"
+              alt="">Truth Embassy Global</a>
+
+        </div>
+c
+      </div>
+    </section><!-- End Our Partners Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h3>Testimonials</h3>
+        </header>
+
+        <div class="owl-carousel testimonials-carousel">
+
+          <div class="testimonial-item">
+            <img src="assets/img/testimonial-1.jpg" class="testimonial-img" alt="">
+            <h3>Abel Peters Usman</h3>
+            <h4>President &amp; Founder</h4>
+            <p>
+              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium
+              quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="assets/img/testimonial-2.jpg" class="testimonial-img" alt="">
+            <h3>Cletus Caleb Kwopnan</h3>
+            <h4>Beneficiary</h4>
+            <p>
+              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              I'm happy and priviledged to be one of the beneficiaries. This si an opportunity to make my family proud and bring glory to the foundation.
+              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
+            <h3>Jacob Adinimil Ago</h3>
+            <h4>Beneficiary</h4>
+            <p>
+              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              I feel blessed, 2020 is truly a blessing. I will make good use of the opportunity to make my parents proud and also the foundation. 
+              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="assets/img/testimonial-4.jpg" class="testimonial-img" alt="">
+            <h3>Rebecca Haruna</h3>
+            <h4>Beneficiary</h4>
+            <p>
+              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim
+              dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="assets/img/testimonial-5.jpg" class="testimonial-img" alt="">
+            <h3>John Larson</h3>
+            <h4>Entrepreneur</h4>
+            <p>
+              <img src="assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
+              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa
+              labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+              <img src="assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3>Team</h3>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <img src="assets/img/team-1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Abel Peters Usman</h4>
+                  <span>President/Founder</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- single person -->
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <img src="assets/img/team-1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Abel Peters Usman</h4>
+                  <span>President/Founder</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+              <!-- single person -->
+          
+              <div class="col-lg-3 col-md-6">
+                <div class="member" data-aos="fade-up" data-aos-delay="100">
+                  <img src="assets/img/team-1.jpg" class="img-fluid" alt="">
+                  <div class="member-info">
+                    <div class="member-info-content">
+                      <h4>Abel Peters Usman</h4>
+                      <span>President/Founder</span>
+                      <div class="social">
+                        <a href=""><i class="fa fa-twitter"></i></a>
+                        <a href=""><i class="fa fa-facebook"></i></a>
+                        <a href=""><i class="fa fa-instagram"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+                  <!-- single person -->
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <img src="assets/img/team-1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Abel Peters Usman</h4>
+                  <span>President/Founder</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h3>Contact Us</h3>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Address</h3>
+              <address>A.P Usman Foundation, After Building Materials Market, Behind Mouka Foam Jos, Plateau State,
+                Nigeria. </address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+2348037020496">+234 8037020496, +234 8036808601</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:apusmanfoundation@gmail.com">apusmanfoundation@gmail.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <%- include ("./partials/messages"); %>
+        <div class="form">
+          <form action="/comment" method="post" role="form" class="php-email-form">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                  data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+            </div>
+            <!-- <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validate"></div>
+            </div> -->
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required"
+                data-msg="Please leave a comment" placeholder="Leave a comment" style="resize: none;"></textarea>
+              <div class="validate"></div>
+            </div>
+            <div class="text-center"><button type="submit">Submit Comment</button></div>
+          </form>
+        </div>
+
+            <div class="row mt-5">
+              <% messages.forEach(message => { %>
+              <div class="col-sm-6 mt-3 main">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= message.name%></h5>
+                    <div>
+                      <p style="list-style-type: none;"> 
+                        <a class="btn drop-btn btn-style" data-toggle="collapse" href="#one<%=message._id %>" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <%= message.short_message %>
+                            <span style="margin-left: 1rem;">
+                              <!-- <i class="fa fa-chevron-circle-down" aria-hidden="true"></i> -->
+                              <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i>
+                            </span>
+                        </a>
+                      </p>
+                      <div class="collapse" id="one<%=message._id %>">
+                        <div class="card card-body drop-body"><%= message.message %></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+            </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>AP Usman Foundation</h3>
+            <p>The foundation operates as a non-profit making organisation exclusively to promote, develop, empower
+              various humanitarian services in accordance with the laid down rules, regulations, act, procedures,
+              policies and principles governing the association and humanity in general.</p>
+          </div>
+          
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#about">About us</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#services">Services</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              <address>
+                A.P Usman Foundation, <br>
+                After Building Materials Market, <br>
+                Behind Mouka Foam Jos, <br>
+                Plateau State, Nigeria. <br>
+              </address>
+              <strong>Phone:</strong>+234 803 7020 496, +234 803 6808 601<br>
+              <strong>Email:</strong><a href="mailto:apusmanfoundation@gmail.com">apusmanfoundation@gmail.com</a><br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        <p>Copyright &copy;
+          <script>document.write(new Date().getFullYear());</script> All rights reserved | AP Usman Foundation</p>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- Vendor JS Files -->
+
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+ 
+
+
+</body>
+
+</html>

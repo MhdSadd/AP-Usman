@@ -1,0 +1,97 @@
+
+
+<%- include("../partials/side-nav") %> 
+<%- include("../partials/header") %> 
+
+<style>
+    .head-color{
+        color: limegreen;
+        font-weight: bolder;
+    }
+</style>
+
+<!--
+=========================================================
+ Material Dashboard - v2.1.1
+=========================================================
+
+ Product Page: https://www.creative-tim.com/product/material-dashboard
+ Copyright 2019 Creative Tim (https://www.creative-tim.com)
+ Licensed under MIT (https://github.com/creativetimofficial/material-dashboard/blob/master/LICENSE.md)
+
+ Coded by Creative Tim
+
+=========================================================
+
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+
+       <!-- End Navbar -->
+       <div class="content">
+         <div class="container-fluid">
+           <div class="row">
+             <div class="col-md-12">
+               <div class="card">
+                 <div class="card-header card-header-primary" style="background: limegreen;">
+                   <h4 class="card-title" style="font-weight:bolder;">All Comments ( <%= all_comment %>  )</h4>
+                 </div>
+                 <div class="card-body">
+                   <div class="table-responsive">
+                     <table class="table">
+                       <thead class=" text-primary">
+                         <th class="head-color">
+                           Name
+                         </th>
+                         <th class="head-color" style="text-align: center;">
+                           Message
+                         </th>
+                         <th class="head-color">
+                           Date
+                         </th>
+                         <th class="head-color">
+                           Approval
+                         </th>
+                         <th class="head-color" style="text-align: center">
+                           Action
+                         </th>
+                       </thead>
+                       <tbody>
+                           <%comments.forEach(comment => { %>
+                            <tr>
+                                <td>
+                                <%=comment.name %>
+                                </td>
+                                <td style="text-align: center;">
+                                <%=comment.message %>
+                                </td>
+                                <td>
+                                <%=comment.comment_date %>
+                                </td>
+                          
+                                <%if (comment.approved == true) { %>
+                                <td style="color: limegreen;"><%=comment.approved%></td>
+                                <% } else { %> 
+                                <td style="color: red;"><%=comment.approved%></td>
+                                <% } %>
+                                
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a href="/comments/delete/<%= comment._id %>" class="dropdown-item">Delete</a>
+                                            <a href="/comments/approve/<%= comment._id %>" class="dropdown-item">Approve</a>
+                                        </div>
+                                    </div>
+                                </td>
+                              </tr>
+                           <% }) %>
+                       </tbody>
+                     </table>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+
+<%- include("../partials/footer") %> 
